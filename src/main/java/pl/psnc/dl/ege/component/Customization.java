@@ -6,6 +6,7 @@ import pl.psnc.dl.ege.types.CustomizationSetting;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.List;
 
 /**
@@ -20,13 +21,14 @@ public interface Customization {
     /**
      * <p>Customization method</p>
      *
-     * @param inputData data to customize as {@link InputStream}
      * @param customizationSetting specified {@link CustomizationSetting} of streamed data.
      * @throws IOException
      * @throws {@link CustomizationException}
      * @throws {@link EGEException}
      */
-    public void customize(InputStream inputData, CustomizationSetting customizationSetting) throws IOException, CustomizationException, EGEException;
+    void customize(CustomizationSetting customizationSetting, String sourceId,
+                          String customizationId, String outputFormat, OutputStream outputStream)
+            throws IOException, EGEException;
 
     /**
      * <p>Supported customization settings</p>
@@ -35,5 +37,6 @@ public interface Customization {
      *
      * @return list of <code>CustomizationSetting</code>.
      */
-    public List<CustomizationSetting> getSupportedCustomizationSettings();
+    List<CustomizationSetting> getSupportedCustomizationSettings();
+
 }

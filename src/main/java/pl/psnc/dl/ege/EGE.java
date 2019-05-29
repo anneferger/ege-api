@@ -6,11 +6,10 @@ import java.io.OutputStream;
 import java.util.List;
 import java.util.Set;
 
-import pl.psnc.dl.ege.exception.ConverterException;
-import pl.psnc.dl.ege.exception.EGEException;
-import pl.psnc.dl.ege.exception.RecognizerException;
-import pl.psnc.dl.ege.exception.ValidatorException;
+import pl.psnc.dl.ege.component.Customization;
+import pl.psnc.dl.ege.exception.*;
 import pl.psnc.dl.ege.types.ConversionsPath;
+import pl.psnc.dl.ege.types.CustomizationSetting;
 import pl.psnc.dl.ege.types.DataType;
 import pl.psnc.dl.ege.types.ValidationResult;
 
@@ -94,8 +93,35 @@ public interface EGE
 	public ValidationResult performValidation(final InputStream inputData,
 			final DataType inputDataType)
 		throws IOException, ValidatorException, EGEException;
-	
-	
+
+
+	/**
+	 * <p>Method performs customization using all loaded through extension mechanism
+	 * {@link Customization} implementations.</p>
+	 * If there is no customization that supports specified customization request, then
+	 * CustomizationException will be throw.<br/>
+	 * If some unexpected errors occurs during customization, method will throw
+	 * EGEException.
+	 *
+	 * @param customizationSetting
+	 *            customization setting
+	 * @param sourceId
+	 * 			  source
+	 * @param customizationId
+	 *            customization
+	 * @param outputFormat
+	 *            outputFormat
+	 * @param outputStream
+	 *            outputStream
+	 * @throws IOException
+	 * @throws {@link CustomizationException}
+	 * @throws {@link EGEException}
+	 */
+	public void performCustomization(final CustomizationSetting customizationSetting,
+									 final String sourceId, final String customizationId,
+									 final String outputFormat, final OutputStream outputStream)
+			throws IOException, EGEException;
+
 	/**
 	 * Method performs recognition of the MIME type of an input data. If any of
 	 * the loaded {@link Recognizer} implementations recognizes MIME type,

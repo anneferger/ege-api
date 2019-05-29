@@ -17,7 +17,7 @@ public class CustomizationSetting implements Comparable {
         this.outputFormats = outputFormats;
     }
 
-    private String getFormat() {
+    public String getFormat() {
         return format;
     }
 
