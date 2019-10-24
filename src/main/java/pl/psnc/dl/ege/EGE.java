@@ -1,5 +1,6 @@
 package pl.psnc.dl.ege;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -8,10 +9,7 @@ import java.util.Set;
 
 import pl.psnc.dl.ege.component.Customization;
 import pl.psnc.dl.ege.exception.*;
-import pl.psnc.dl.ege.types.ConversionsPath;
-import pl.psnc.dl.ege.types.CustomizationSetting;
-import pl.psnc.dl.ege.types.DataType;
-import pl.psnc.dl.ege.types.ValidationResult;
+import pl.psnc.dl.ege.types.*;
 
 /**
  * <p>
@@ -105,9 +103,9 @@ public interface EGE
 	 *
 	 * @param customizationSetting
 	 *            customization setting
-	 * @param sourceId
+	 * @param sourceInputType
 	 * 			  source
-	 * @param customizationId
+	 * @param customizationInputType
 	 *            customization
 	 * @param outputFormat
 	 *            outputFormat
@@ -118,8 +116,10 @@ public interface EGE
 	 * @throws {@link EGEException}
 	 */
 	public void performCustomization(final CustomizationSetting customizationSetting,
-									 final String sourceId, final String customizationId,
-									 final String outputFormat, final OutputStream outputStream)
+									 final CustomizationSourceInputType sourceInputType,
+									 final CustomizationSourceInputType customizationInputType,
+									 final String outputFormat, final OutputStream outputStream,
+									 final File localSourceFile, final File localCustomizationFile)
 			throws IOException, EGEException;
 
 	/**

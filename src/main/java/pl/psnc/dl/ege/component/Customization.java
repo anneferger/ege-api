@@ -3,7 +3,9 @@ package pl.psnc.dl.ege.component;
 import pl.psnc.dl.ege.exception.CustomizationException;
 import pl.psnc.dl.ege.exception.EGEException;
 import pl.psnc.dl.ege.types.CustomizationSetting;
+import pl.psnc.dl.ege.types.CustomizationSourceInputType;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -26,8 +28,9 @@ public interface Customization {
      * @throws {@link CustomizationException}
      * @throws {@link EGEException}
      */
-    void customize(CustomizationSetting customizationSetting, String sourceId,
-                          String customizationId, String outputFormat, OutputStream outputStream)
+    void customize(CustomizationSetting customizationSetting, CustomizationSourceInputType sourceId,
+                   CustomizationSourceInputType customizationId, String outputFormat, OutputStream outputStream,
+                   File localSourceFile, File localCustomizationFile)
             throws IOException, EGEException;
 
     /**
