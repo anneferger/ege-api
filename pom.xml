@@ -86,11 +86,12 @@
     <developer>
       <id>roewenstrunk</id>
       <name>Daniel Röwenstrunk</name>
-      <email></email>
+      <email>roewenstrunk@uni-paderborn.de</email>
       <roles>
-        <role></role>
+        <role>Stakeholder</role>
+	<role>Developer</role>
       </roles>
-      <organization></organization>
+      <organization>Paderborn University</organization>
     </developer>
   </developers>
   <build>
