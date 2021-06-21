@@ -4,7 +4,7 @@
   <groupId>pl.psnc.dl.ege</groupId>
   <artifactId>ege-api</artifactId>
   <packaging>jar</packaging>
-  <version>0.2.1</version>
+  <version>0.3.0</version>
   <name>EGE API</name>
   <properties>
 
@@ -19,11 +19,6 @@
   </properties>
 
   <url>multiprojects/ege-api/</url>
-  <parent>
-    <groupId>pl.psnc.dl.ege</groupId>
-    <artifactId>ege</artifactId>
-    <version>0.5.0</version>
-  </parent>
   <description>
    Major EGE library contains necessary interfaces and classes.
   </description>
@@ -87,6 +82,15 @@
         <role>Stakeholder</role>
       </roles>
       <organization>PSNC</organization>
+    </developer>
+    <developer>
+      <id>roewenstrunk</id>
+      <name>Daniel Röwenstrunk</name>
+      <email></email>
+      <roles>
+        <role></role>
+      </roles>
+      <organization></organization>
     </developer>
   </developers>
   <build>
