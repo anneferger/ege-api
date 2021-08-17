@@ -5,4 +5,9 @@
 !pom.xml
 !*.java
 !*.md
-
+!*.txt
+!*.xml
+!*.gif
+!*.png
+!*.jpg
+!MANIFEST.MF
