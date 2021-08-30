@@ -32,5 +32,5 @@ jobs:
     - name: Upload Maven build artifact
       uses: actions/upload-artifact@v2
       with:
-        name: mei-validator-0.3.0.jar
+        name: ege-api-0.3.0.jar
         path: /home/runner/work/ege-api/ege-api/target/ege-api-0.3.0.jar
