@@ -156,4 +156,11 @@
       </plugin>
     </plugins>
   </reporting>
+<distributionManagement>
+   <repository>
+     <id>github</id>
+     <name>GitHub TEIC Apache Maven Packages</name>
+     <url>https://maven.pkg.github.com/teic/ege-api</url>
+   </repository>
+</distributionManagement>
 </project>
