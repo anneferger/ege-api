@@ -5,7 +5,7 @@
     <groupId>pl.psnc.dl.ege</groupId>
     <artifactId>ege-api</artifactId>
     <packaging>jar</packaging>
-    <version>0.4.0-SNAPSHOT</version>
+    <version>0.4.0</version>
     <name>EGE API</name>
     <properties>
 
