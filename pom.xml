@@ -118,6 +118,37 @@
                     <target>11</target>
                 </configuration>
             </plugin>
+            <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-pmd-plugin</artifactId>
+            <version>3.13.0</version>
+            <configuration>
+                <failOnViolation>false</failOnViolation>
+                <printFailingErrors>true</printFailingErrors>
+                <linkXRef>false</linkXRef>
+            </configuration>
+            <executions>
+              <execution>
+                <phase>compile</phase>
+                <goals>
+                  <goal>check</goal>
+                </goals>
+              </execution>
+            </executions>
+            </plugin>
+            <plugin>
+              <groupId>org.owasp</groupId>
+              <artifactId>dependency-check-maven</artifactId>
+              <version>8.2.1</version>
+              <executions>
+                  <execution>
+                      <phase>compile</phase>
+                      <goals>
+                          <goal>check</goal>
+                      </goals>
+                  </execution>
+              </executions>
+            </plugin>
         </plugins>
     </build>
     <!-- <reporting>
